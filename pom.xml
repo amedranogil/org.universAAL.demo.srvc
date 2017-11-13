@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.universAAL.training</groupId>
+  <artifactId>universAAL.demo.srvc</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+
+  <properties>
+    <separatedGroupIds>org.universAAL.middleware</separatedGroupIds>
+  </properties>
+
+  <dependencies>
+    <!-- DEPENDENCIES for TESTS -->
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+	</dependency>  	 	
+    <dependency>
+		<groupId>org.universAAL.support</groupId>
+		<artifactId>itests</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
+        <scope>test</scope>
+    </dependency>	
+    <dependency>
+       <groupId>org.universAAL.middleware</groupId>
+       <artifactId>mw.bus.junit</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
+       <scope>test</scope>
+    </dependency>
+	
+    <!-- DEPENDENCIES for universAAL IoT Buses -->
+  	<dependency>
+  		<groupId>org.universAAL.middleware</groupId>
+  		<artifactId>mw.bus.context.core</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
+  	</dependency>   	
+  	<dependency>
+  		<groupId>org.universAAL.middleware</groupId>
+  		<artifactId>mw.bus.service.core</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
+  	</dependency>  	
+  	<dependency>
+  		<groupId>org.universAAL.middleware</groupId>
+  		<artifactId>mw.bus.ui.core</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
+  	</dependency> 
+	
+    <!-- DEPENDENCIES for Ontologies -->
+  	<dependency>
+  		<groupId>org.universAAL.ontology</groupId>
+  		<artifactId>ont.phWorld</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>maven-bundle-plugin</artifactId>
+			<extensions>true</extensions>
+			<configuration>
+				<instructions>
+					<Export-Package>org.universAAL.training.universAAL.demo.srvc</Export-Package>
+				</instructions>
+			</configuration>
+		</plugin>
+	</plugins>
+  </build>
+  
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <id>uaal-snapshots</id>
+      <name>universAAL Snapshot Repositories</name>
+      <url>http://depot.universaal.org/maven-repo/snapshots/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>uaal</id>
+      <name>universAAL Repositories</name>
+      <url>http://depot.universaal.org/maven-repo/releases/</url>
+    </repository>
+  </repositories>
+</project>
