@@ -55,6 +55,11 @@
   		<artifactId>ont.phWorld</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.universAAL.ontology</groupId>
+  		<artifactId>ont.device</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 
   <build>
